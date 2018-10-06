@@ -1,16 +1,199 @@
-header {
-    text-align: center;
+body{
+	font-family: Helvetica, Arial, sans-serif
 }
 
-<div id="todo-lists">
-    <div class="list">
-        <h2 class="list-title">Groceries</h2>
-        <ol>
-            <li>Eggs</li>
-            <li>Milk</li>
-            <li>Cereal</li>
-        </ol>
+/* Logo */
+#logo {
+	float: left;
+	display: inline-block;
+	width: 200px;
+}
+/* Cart Logo */
+#cart {
+	float: right;
+	display: inline-block;
+	width: 50px;
+	padding: 30px;
+	margin-top: 10px;
+}
+/* Amount of Items in Cart */
+#cartNum {
+	position: absolute;
+	top: 53px;
+	right: 62.5px;
+	font-weight: bold;	
+}
+/* home page image */
+#frontImage {
+	margin-top: 80px;
+	width: 100%;
+}
+/* text on home page DELIVERY*/
+#text1 {
+	font-style: italic;
+	font-size: 15px;
+	position: absolute;
+	top: 153px;
+	left: 50%;
+	color: #E48E27;
+	transform: translate(-50%, -50%); /* to keep text centred */
+}
+/* background colour band for text */
+#textBg {
+	width: 100%;
+	height: 50px;
+	background: rgba(228, 142, 39, 0.1);
+	position: absolute;
+	top: 125px;
+	bottom: 175px;
+}
+/* text on image CUSTOMISABLE */
+#text2 {
+	color: #E48E27;
+	font-size: 30px;
+	position: absolute;
+	top: 250px;
+	left: 50%;
+	transform: translate(-50%, -50%); /* to keep text centred */
+	text-shadow: 1px 2px white;
+}
+/* text on image 6 FLAVOURS */
+#text3 {
+	color: #E48E27;
+	font-size: 60px;
+	position: absolute;
+	top: 325px;
+	left: 50%;
+	transform: translate(-50%, -50%); /* to keep text centred */
+	text-shadow: 2px 2px black;
+}
+/* text on image 3 GLAZINGS */
+#text4 {
+	color: #E48E27;
+	font-size: 60px;
+	position: absolute;
+	top: 400px;
+	left: 50%;
+	transform: translate(-50%, -50%); /* to keep text centred */
+	text-shadow: 2px 2px black;
+}
 
-    </div>
-</div>
 
+/* NAVIGATION BAR */
+.navBar ul {
+	list-style: none;
+	text-align: left;;
+	margin: 0;
+	font-size: 20px;
+}
+/* to give placement to the divs of the nav bar */
+.navBar li {
+	float: left;
+	width: 200px;
+}
+/* styles that affect the four divs of the nav bar */
+.navBar li a {
+	display: inline;
+	display: block;
+	color: black;
+	margin-top: 40px;
+	margin-left: 60px;
+	padding: 5px 75px 5px 5px;
+	border-width: 1px;
+	border-left-style: solid;
+	border-left-color: #E48E27;
+}
+/* to add a hover effect of colour gradient and border edge change */
+.navBar li a:hover {
+	background-image: linear-gradient(to right, rgba(228, 142, 39, 0.5), rgba(228, 142, 39, 0));
+	border-width: 3px;
+	border-left-style: solid;
+	border-left-color: #E48E27;
+}
+/* to remove all decoration (eg. underline) for all links */
+.navBar li a:link {
+	text-decoration: none;
+}
+/* to remove all decoration for page visited by user */
+.navBar li a:visited {
+	text-decoration: none;
+}
+/* to indicate which page the user is currently on */
+li.selected {
+	font-weight: bold;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+
+/* creating the arrows for carousel (currently static)*/
+i {
+	border: solid black;
+	border-width: 0 4px 4px 0;
+	display: inline-block;
+	padding: 8px;
+}
+.right {
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 225px;
+	left: 60px;
+}
+.left {
+	transform: rotate(135deg);
+	position: absolute;
+	top: 225px;
+	left: 35px;
+}
+/* creating the dots to indicate carousel number (currently static)*/
+#rectangle3 {
+	width: 15px;
+	height: 15px;
+	background: lightgrey;
+	position: absolute;
+	top: 228px;
+	right: 50px;
+}
+#rectangle2 {
+	width: 15px;
+	height: 15px;
+	background: lightgrey;
+	position: absolute;
+	top: 228px;
+	right: 80px;
+}
+#rectangle {
+	width: 15px;
+	height: 15px;
+	background: #bbb;
+	position: absolute;
+	top: 228px;
+	right: 110px;
+}
+
+
+/* The row and columns of the flavour grid */
+.row {
+	font-size: 0;
+	width: 1250px;
+	margin: 0 auto;
+	float: left;
+}
+.column {
+	margin: 100px 50px 100px 50px;
+	display: inline-block;
+}
+
+
+.textFlavour {
+	font-size: 15;
+	width: 1250px;
+	margin: 0 auto;
+	float: left;
+}
+.flavourName{
+	margin: 100px 200px 100px 50px;
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: bold;
+}

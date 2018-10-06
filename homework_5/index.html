@@ -3,34 +3,49 @@
 <head>
 	 <!-- styles -->
      <link rel="stylesheet" type="text/css" href="style.css">
-     <a href="list.html">Groceries</a>
-   
-    <title>ToDo App</title>
-    <meta charset="UTF-8">
+    <title>Bun Bun Bake Shop</title>
 </head>
 
 <body>
-	<header>
-	    <h1>My To Do Lists</h1>
-	    <nav>
-	        <a href="index.html">main</a> -
-	        <a href="settings.html">settings</a>
-	    </nav>
-	</header>
-    
+	<div class="container">
+		<!-- NAVIGATION BAR -->
+		<div class="navBar">
+			<img src = "Images/Logo.png" id="logo"/>
+			<img src = "Images/Cart.png" id="cart"/>
+			<ul>
+		        <li class="selected"> <a href="index.html">Home</a>
+		        <li> <a href="flavours.html">Flavours</a>
+		        <li> <a href="about.html">About</a>
+		        <li> <a href="contact.html">Contact</a>
+			</ul>
+			<div id="cartNum">
+				0
+			</div>
+		</div>
+		<!-- PHOTO -->
+		<div class="photo"> 		
+			<!-- home page image -->
+			<img src="Images/cinnamonrolls.jpg" id="frontImage">
+			<!-- arrows to control carousel (currently static) -->
+			<i class="arrow right"></i>
+			<i class="arrow left"></i>
+			<!-- to indicate which slide of carousel -->
+			<div id="rectangle"></div>
+			<div id="rectangle2"></div>
+			<div id="rectangle3"></div>
+			<!-- orange text (delivery) -->
+			<div id="text1">
+				<p class="textStyle"> All your favourite flavours, available for delivery to anywhere you are in Pittsburgh! </p></div>
+			<!-- background colour band for text -->
+			<div id="textBg"></div>		
+			<!-- text on image for attention grabbing -->
+			<div id="text2">
+				<p> Customisable to Suit Your Tastes! </p></div>
+			<div id="text3">
+				<p> 6 Flavours </p></div>
+			<div id="text4">
+				<p> 3 Glazings </p></div>
 
-    <div id="todo-lists">
-	    <div class="list">
-	       Groceries
-	    </div>
-
-	    <div class="list">
-	       Homework
-	    </div>
-
-	    <div class="list">
-	       Random Errands
-	    </div>
 	</div>
 
 </body>
