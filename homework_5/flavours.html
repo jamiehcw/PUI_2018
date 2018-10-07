@@ -15,42 +15,144 @@
 			<ul>
 		        <li> <a href="index.html">Home</a>
 		        <li class="selected"> <a href="flavours.html">Flavours</a>
-		        <li> <a href="about.html">About</a>
-		        <li> <a href="contact.html">Contact</a>
+		        <li> <a href="checkout.html">Checkout</a>
+		        <li> <a href="#">Contact</a>
 			</ul>
+			<div id="cartNum">
+				0
+			</div>
 		</div>
-		<!-- 6 IMAGES -->
+
+		<!-- 3 COL 2 ROW IMAGES AND TEXT -->
 		<div class="row">
-			<img class="column" src = "Images/Blueberry.jpg">
-			<img class="column" src = "Images/Caramel Pecan.jpg">
-			<img class="column" src = "Images/Original2.jpg">
-			<img class="column" src = "Images/Original3.jpg">
-			<img class="column" src = "Images/Pumpkin Spice.jpg">
-			<img class="column" src = "Images/Chocolate.jpg">
-		</div>
-		<!-- Text -->
-		<div class="textFlavour">
-			<li class="flavourName"> Blueberry
-			<li class="flavourName"> Caramel Pecan
-			<li class="flavourName"> Original
-			<li class="flavourName"> Original Gluten-Free
-			<li class="flavourName"> Pumpmkin Spice
-			<li class="flavourName"> Walnut
-		</div>
-		<div class="textDescription">
-			<p>Fresh blueberries brought in every morning for this juicy cinnamon roll!</p>
-			<p>Perfect for someone craving sweets with a sprinkle of pecan!</p>
-			<p>Nothing goes wrong with the classic!</p>
-			<p>The class, and gluten-free!</p>
-			<p>For a taste of fall in this cozy pumpkin treat!</p>
-			<p>A sprinkle of walnut for a healthier option!</p>
-		</div>
-		<div class="textNutrition">
-			<p>nutritionalValue</p>
+			<div class="col">
+<!-- NUMBER 1 -->
+				<!-- col holds flavour name, description, image and nutrition link -->
+				<div class="flavourText">
+					<h3>Blueberry</h3>
+					<p>Daily fresh blueberries for the juicy flavour!</p>
+				</div>
+				<!-- to wrap image for text placement and define area for clicking of popup menu-->
+				<a href="#popup1"><div class="imageWrap">	<!-- #popup1 is the tag that shows up on html for adding popup -->		
+					<img class="image" src="Images/Blueberry.jpg">
+					<p class="hoverText">Click to Order</p>
+				</a></div>
+				<!-- creating the popup menu -->
+				<div id="popup1" class="overlay">	<!-- the black background that is overlay on top of the flavours page -->
+					<!-- to contain everything inside the popup menu -->
+					<div class="popup">
+						<img class="image" src="Images/Blueberry.jpg">
+						<a class="close" href="flavours.html">&times;</a>
+						<div class="content">
+							<h1>Blueberry</h1>
+							<p>The blueberries used in our cinnamon rolls are delivered daily to our bakery so that our blueberry cinnamon rolls are delivered to you fresh, sweet and juicy!</p>
+							<div class="selection1">
+								<h2>Quantity</h2>
+									<ul>
+										<li> 1
+										<li> 3
+										<li> 6
+										<li> 12
+									</ul>
+							</div>
+							<div class="selection2">
+								<h2>Glazing</h2>
+								<ul>
+									<li> None
+									<li> Double Chocolate
+									<li> Sugar-Milk
+									<li> Vanilla-Milk
+								</ul>
+								<div class="amt">
+									<li>0
+									<li>0
+									<li>0
+									<li>0
+								</div>
+							</div>
+							<div class="buttons">
+								<h4 class="add">Add to Cart</h4>
+								<h4 class="buy">Checkout</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a href="#"><div class="nutrition">
+					<p>Click for Nutritional Value</p>
+				</a></div>
+			</div>
+			<div class="col">
+<!-- NUMBER 2 -->
+				<div class="flavourText">
+					<h3>Caramel Pecan</h3>
+					<p>Perfect for someone craving sweets!</p>
+				</div>
+				<a href="#"><div class="imageWrap">
+					<img class="image" src="Images/Caramel Pecan.jpg">
+					<p class="hoverText">Click to Order</p>
+				</a></div>
+				<a href="#"><div class="nutrition">
+					<p>Click for Nutritional Value</p>
+				</a></div>
+			</div>
+			<div class="col">
+<!-- NUMBER 3 -->
+				<div class="flavourText">
+					<h3>Original</h3>
+					<p>Nothing goes wrong with the classic!</p>
+				</a></div>
+				<a href="#"><div class="imageWrap">
+					<img class="image" src="Images/Original2.jpg">
+					<p class="hoverText">Click to Order</p>
+				</div>
+				<a href="#"><div class="nutrition">
+					<p>Click for Nutritional Value</p>
+				</a></div>
+			</div>
+<!-- NUMBER 4 -->
+			<div class="col">
+				<div class="flavourText">
+					<h3>Original Gluten-Free</h3>
+					<p>The classic, but gluten-free!</p>
+				</div>
+				<a href="#"><div class="imageWrap">
+					<img class="image" src="Images/Original3.jpg">
+					<p class="hoverText">Click to Order</p>
+				</a></div>
+				<a href="#"><div class="nutrition">
+					<p>Click for Nutritional Value</p>
+				</a></div>
+			</div>
+<!-- NUMBER 5 -->
+			<div class="col">
+				<div class="flavourText">
+					<h3>Pumpkin Spice</h3>
+					<p>For a taste of fall in this cozy pumpkin treat!</p>
+				</div>
+				<a href="#"><div class="imageWrap">
+					<img class="image" src="Images/Pumpkin Spice.jpg">
+					<p class="hoverText">Click to Order</p>
+				</a></div>
+				<a href="#"><div class="nutrition">
+					<p>Click for Nutritional Value</p>
+				</a></div>
+			</div>
+<!-- NUMBER 6 -->
+			<div class="col">
+				<div class="flavourText">
+					<h3>Walnut</h3>
+					<p>A sprinkle of walnut for a healthier option!</p>
+				</div>
+				<a href="#"><div class="imageWrap">
+					<img class="image" src="Images/Chocolate.jpg">
+					<p class="hoverText">Click to Order</p>
+				</a></div>
+				<a href="#"><div class="nutrition">
+					<p>Click for Nutritional Value</p>
+				</a></div>
+			</div>
 		</div>
 	</div>
-
 </body>
 
 </html>
-
