@@ -3,7 +3,7 @@
 <head>
 	 <!-- styles -->
      <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Flavours</title>
+    <title>Checkout</title>
 </head>
 
 <body>
@@ -22,8 +22,79 @@
 				1
 			</div>
 		</div>
-
+		<!-- to indicate how many items have been added to cart -->
 		<div class="message">
 			<h1>You have ordered [1] item(s):</h1>
+		</div>
+		<!-- the list of items -->
+		<div class="orderContent">
+			<!-- first column -->
+			<div class="groupContent">
+				<img class="photo" src="Images/Blueberry.jpg">
+				<div class="choice selected">
+					<h3>Blueberry</h3>
+					<h4>Glazing:</h4>
+					<h5>[1] Sugar-Milk</h5>
+				</div>
+				<div class="amount selected">
+					<h3>x 1</h3>
+				</div>
+			</div>
+			<div class="groupContent">
+				<img class="photo none" src="Images/Caramel Pecan.jpg"> 	<!-- none & unchosen mean what has not been selected -->
+				<div class="choice unchosen">
+					<h3>Caramel Pecan</h3>
+				</div>
+				<div class="amount unchosen">
+					<h3>x 0</h3>
+				</div>
+			</div>
+			<div class="groupContent">
+				<img class="photo none" src="Images/Original2.jpg">
+				<div class="choice unchosen">
+					<h3>Original</h3>
+				</div>
+				<div class="amount unchosen">
+					<h3>x 0</h3>
+				</div>
+			</div>
+			<!-- other column -->
+			<div class="groupContent">
+				<img class="photo none" src="Images/Original3.jpg">	
+				<div class="choice unchosen"> 
+					<h3>Gluten-Free</h3>
+				</div>
+				<div class="amount unchosen">
+					<h3>x 0</h3>
+				</div>
+			</div>
+			<div class="groupContent">
+				<img class="photo none" src="Images/Pumpkin Spice.jpg">
+				<div class="choice unchosen">
+					<h3>Pumpkin Spice</h3>
+				</div>
+				<div class="amount unchosen">
+					<h3>x 0</h3>
+				</div>
+			</div>
+			<div class="groupContent">
+				<img class="photo none" src="Images/Chocolate.jpg">
+				<div class="choice unchosen">
+					<h3>Walnut</h3>
+				</div>
+				<div class="amount unchosen">
+					<h3>x 0</h3>
+				</div>
+			</div>
+			<!-- to create the total cost message -->
+			<div class="message2">
+				<h2>Your current total is $2.99</h2>
+			</div>
+			<!-- to create buttons -->
+			<div class="buttonsFinal">
+				<h2 class="confirm">Confirm</h2>
+				<a href="flavours.html"><h2 class="return">Keep Browsing</h2></a>
+		</div>
+		
 	</div>
 </body>

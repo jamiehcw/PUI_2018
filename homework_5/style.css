@@ -87,22 +87,26 @@ body{
 .navBar ul {
 	list-style: none;
 	text-align: left;
+	float: left;
 	margin: 0;
 	font-size: 20px;
+	min-width: 400px;
 }
 /* to give placement to the divs of the nav bar */
 .navBar li {
 	float: left;
-	width: 150px;		/* to make sure the nav don't shift with the change in font to bold */
+	width: 12vw;		
+	min-width: 100px;	/* define width to make sure the nav don't shift with the change in font to bold */
 }
 /* styles that affect the four divs of the nav bar */
 .navBar li a {
 	display: inline;
 	display: block;
 	color: black;
+	font-size: 15px;
 	margin-top: 40px;
-	margin-left: 60px;
-	padding: 5px 75px 5px 5px;
+	margin-left: 10px;
+	padding-left: 5px;
 	border-width: 1px;
 	border-left-style: solid;
 	border-left-color: #E48E27;
@@ -179,7 +183,7 @@ i {
 /* THIS IS FOR FLAVOURS PAGE */
 /* The row and columns of the flavour grid */
 .row {
-	max-width: 1350px;			/* (300px/image x 3 images) + (75px/edge x 6 edges) = 1350px*/
+	max-width: 75vw;			/* (300px/image x 3 images) + (75px/edge x 6 edges) = 1350px*/
 	margin: 0 auto;				/* centre */
 	padding-top: 150px;			/* distance from top nav bar */
 }
@@ -188,7 +192,9 @@ i {
 	height: 450px;				/* height allowed for each grid */
 	text-align: center;
 	float: left;				/* to align images next to each other */
-	padding: 0 75px 50px;		/* distances from each box of the grid */
+	padding-bottom: 50px;		/* distances from each box of the grid */
+	padding-left: 3vw;
+	padding-right: 3vw;
 }
 /* Text above image */
 .flavourText {
@@ -244,6 +250,7 @@ i {
 
 
 
+/* POPUP ORDER PAGE */
 /* the pop up menu that's hidden */
 .overlay {								
 	width: 100%;
@@ -269,8 +276,10 @@ i {
 	padding: 20px;
  	background: rgba(255, 255, 255, 0.9);
 	border-radius: 5px;
-	width: 75%;
-	height: 50%;
+	min-width: 675px;
+	max-width: 800px;
+	width: 75vw;
+	height: 500px;
 	position: relative;
 	z-index: 5;
 }
@@ -314,12 +323,12 @@ i {
 	top: 175px;
 	left: 350px;
 	padding: 25px;
+	min-width: 250px;
 }
 .popup .selection1 li {
 	float: left;
-	width: 60px;
+	width: 3vw;
 	text-align: center;
-	background-color: rgba(228, 142, 39, 0.15);
 	padding: 5px 10px;
 	border-style: solid;
 	border-width: 1px;
@@ -327,7 +336,13 @@ i {
 	border-radius: 5px;
 	box-shadow: 1px 1px;
 	margin: 0 3px;
-
+}
+/* adding colour to hovered over selection buttons */
+.popup .selection1 li:hover {
+	background-color: rgba(228, 142, 39, 0.25);
+}
+.popup .selection2 .amt li:hover {
+	background-color: rgba(228, 142, 39, 0.25);
 }
 /*Glazing selection*/
 .popup .selection2 h2 {
@@ -337,10 +352,11 @@ i {
 	left: 225px;
 }
 .popup .selection2 ul {
+	float: left;
 	list-style: none;
 	position: absolute;
 	top: 220px;
-	left: 525px;
+	left: 450px;
 	padding: 25px;
 }
 .popup .selection2 li {
@@ -351,7 +367,7 @@ i {
 	padding: 5px 10px;
 	margin: 8px 0;
 }
-/* glazing text options */
+/* glazing number options */
 .popup .selection2 .amt {
 	list-style: none;
 	float: left;
@@ -360,14 +376,13 @@ i {
 	left: 375px;
 }
 .popup .selection2 .amt li {
-	background: rgba(228, 142, 39, 0.15);
 	border-radius: 10px;
 	border-style: solid;
 	border-width: thin;
 	border-color: black;
 	box-shadow: 1px 1px;
-	width: 75px;
-	padding-left: 75px;
+	width: 1vw;
+	padding-left: 50px;
 	margin: 5px 1px;
 }
 /* buttons */
@@ -424,7 +439,88 @@ i {
 	float: left;
 	position: absolute;
 	top: 150px;
-	width: 99%;
+	width: 95vw;
 	padding-left: 25px;
 	background-image: linear-gradient(to right, rgba(228, 142, 39, 0.25), rgba(228, 142, 39, 0));
+}
+.orderContent {
+	position: absolute;
+	top: 250px;
+	width: 95vw;
+}
+.groupContent {
+	float: left;
+	padding: 10px;
+	padding-right: 50px;
+}
+.groupContent .selected {
+	color: #E48E27;
+}
+.groupContent .unchosen {
+	color: rgba(0, 0, 0, 0.15);
+}
+.groupContent .photo {
+	float: left;
+	width: 15vw;
+	min-width: 100px;
+	max-width: 200px;
+	border-style: solid;
+	border-width: medium;
+	border-color: #E48E27;
+}
+.groupContent .none {
+	opacity: 0.15;
+}
+.groupContent .choice {
+	float: left;
+	width: 18vw;
+	padding-left: 25px;
+	max-width: 300px;
+}
+.groupContent .choice h3 {
+	text-transform: uppercase;
+	line-height: 0;
+}
+.groupContent .choice h4, h5 {
+	font-weight: normal;
+	line-height: 0;
+}
+.groupContent .choice h5 {
+	padding-left: 25px;
+}
+.groupContent .amount {
+	float: left;
+	line-height: 0;
+}
+.message2 {
+	float: left;
+	width: 95vw;
+	text-align: right;
+	margin-top: 25px;
+	padding-right: 25px;
+	background-image: linear-gradient(to right, rgba(228, 142, 39, 0), rgba(228, 142, 39, 0.25));
+}
+.buttonsFinal {
+	margin-top: 25px;
+	margin-bottom: 50px;
+}
+.buttonsFinal .confirm {
+	float: right;
+	text-align: center;
+	width: 200px;
+	background: red;
+	padding: 10px;
+	color: white;
+	text-transform: uppercase;
+	box-shadow: 2px 2px #000;
+}
+.buttonsFinal .return {
+	float: left;
+	text-align: center;
+	width: 300px;
+	background: orange;
+	padding: 10px;
+	color: white;
+	text-transform: uppercase;
+	box-shadow: 2px 2px #000;
 }
