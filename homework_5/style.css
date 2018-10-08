@@ -183,7 +183,7 @@ i {
 /* THIS IS FOR FLAVOURS PAGE */
 /* The row and columns of the flavour grid */
 .row {
-	max-width: 75vw;			/* (300px/image x 3 images) + (75px/edge x 6 edges) = 1350px*/
+	max-width: 75vw;			/* width based on the user's viewport width */
 	margin: 0 auto;				/* centre */
 	padding-top: 150px;			/* distance from top nav bar */
 }
@@ -210,7 +210,7 @@ i {
 	color: #E48E27;
 }
 
-/*NUTRITION VALUE*/
+/*NUTRITION VALUE & link functions */
 .nutrition {
 	margin: 0;
 	font-size: 14px;
@@ -226,6 +226,8 @@ i {
 	color: #E48E27;
 }
 
+
+/* creating the hover text by wrapping the image with a div for easy text alignment */
 .imageWrap {
 	position: relative;
 	height: 300px;
@@ -283,6 +285,7 @@ i {
 	position: relative;
 	z-index: 5;
 }
+/* popup cinnamon roll image */
 .popup .image {
 	float: left;
 	width: 200px;
@@ -291,6 +294,7 @@ i {
 	border-width: thin;
 	border-color: #E48E27;
 }
+/* popup text that goes next to image */
 .popup .content {
 	position: absolute;
 	top: 35px;
@@ -298,6 +302,7 @@ i {
 	max-height: 75%
 	overflow: auto;
 }
+/* changing the font options and alignment of text next to image */
 .popup h1 {
 	float: left;
 	padding-left: 25px;
@@ -443,22 +448,27 @@ i {
 	padding-left: 25px;
 	background-image: linear-gradient(to right, rgba(228, 142, 39, 0.25), rgba(228, 142, 39, 0));
 }
+/* the box that contains everything below the message div */
 .orderContent {
 	position: absolute;
 	top: 250px;
 	width: 95vw;
 }
+/* the box within orderContent that contains one flavour info */
 .groupContent {
 	float: left;
 	padding: 10px;
 	padding-right: 50px;
 }
+/* the text colour of flavour that's been added to cart */
 .groupContent .selected {
 	color: #E48E27;
 }
+/* the text colour of flavour that hasn't been added */
 .groupContent .unchosen {
 	color: rgba(0, 0, 0, 0.15);
 }
+/* the aesthetics of the image that's been added to cart */
 .groupContent .photo {
 	float: left;
 	width: 15vw;
@@ -468,15 +478,18 @@ i {
 	border-width: medium;
 	border-color: #E48E27;
 }
+/* the aesthetics of the image that hasn't been added */
 .groupContent .none {
 	opacity: 0.15;
 }
+/* the box for the user input selections */
 .groupContent .choice {
 	float: left;
 	width: 18vw;
 	padding-left: 25px;
 	max-width: 300px;
 }
+/* user input text formatting */
 .groupContent .choice h3 {
 	text-transform: uppercase;
 	line-height: 0;
@@ -492,6 +505,7 @@ i {
 	float: left;
 	line-height: 0;
 }
+/* bottom message on total cost */
 .message2 {
 	float: left;
 	width: 95vw;
@@ -500,6 +514,7 @@ i {
 	padding-right: 25px;
 	background-image: linear-gradient(to right, rgba(228, 142, 39, 0), rgba(228, 142, 39, 0.25));
 }
+/* box that contains both buttons at the bottom */
 .buttonsFinal {
 	margin-top: 25px;
 	margin-bottom: 50px;
