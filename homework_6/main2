@@ -1,0 +1,100 @@
+var products = [];
+var carts = [];   //array with the objects created when added to cart
+
+function Item(flavour, qty, glazing, price) {
+  
+  this.flavour = flavour;
+  this.qty = qty;
+  this.glazing = glazing;
+  this.price = price;
+}
+
+function addToCart() {
+  var flavour = document.getElementsByClassName("taste")[0].textContent;
+  var qty = document.getElementsByClassName("amount")[0].value;
+  var glazing = document.getElementsByClassName("glazing")[0].value;
+  var price = document.getElementsByClassName("price")[0].textContent;
+
+  var item = new Item(flavour, qty, glazing, price);
+  carts.push(item);
+  console.log(carts);
+  cartQty();
+  saveCart();
+}
+
+function cartQty() {
+  document.getElementById("cartNum").innerHTML = carts.length;
+}
+function finalCartQty() {
+  document.getElementById("finalCartNum").innerHTML = myCart.length;
+}
+
+function totalCost() {
+  var totalCost = 0;
+  for(var i in cart) {
+    totalCost += carts[i].price;
+  }
+  return totalCost;
+}
+
+/*
+function removeItemFromCart(name) {
+  for(var i in carts) {
+    if(carts[i].name === name) {
+      carts[i].quantity --;
+      if(carts[i].quantity === 0) {
+        carts.splice(i, 1); //to remove item completely when it reaches 0 to make sure it stays at 0, not -ve
+      }
+      break;
+    }
+  }
+  saveCart();
+}
+
+function removeAllItemFromCart(name) {
+  for(var i in carts) {
+    if(carts[i].name === name) {
+      carts.splice(i, 1);
+      break;
+    }
+  }
+  saveCart();
+}
+*/
+
+function saveCart() {
+  localStorage.setItem("carts",JSON.stringify(carts));
+}
+
+
+var myCart = JSON.parse(localStorage.getItem("carts"));
+
+function loadCart() {
+
+  for(var i = 0; i < myCart.length; i++) {
+    var bunFlavour = document.createElement("span");
+    bunFlavour.appendChild(document.createTextNode(myCart[i].flavour));
+
+    var bunQty = document.createElement("span");
+    bunFlavour.appendChild(document.createTextNode(myCart[i].qty));
+
+    var bunGlazing = document.createElement("span");
+    bunFlavour.appendChild(document.createTextNode(myCart[i].glazing));
+
+    var bunPrice = document.createElement("span");
+    bunFlavour.appendChild(document.createTextNode(myCart[i].price));
+
+
+    document.getElementById("cartContent").appendChild(bunFlavour);
+    document.getElementById("cartContent").appendChild(bunQty);
+    document.getElementById("cartContent").appendChild(bunGlazing);
+    document.getElementById("cartContent").appendChild(bunPrice);
+  }  
+}
+
+function displayCart() {
+  loadCart(); 
+  
+}
+displayCart();
+finalCartQty();

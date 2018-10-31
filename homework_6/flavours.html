@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- styles -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<!-- jquery -->
+	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+    <title>Flavours</title>
+</head>
+
+<body>
+	<div class="container">
+		<!-- NAVIGATION BAR -->
+		<div class="navBar">
+			<img src = "Images/Logo.png" id="logo"/>
+			<img src = "Images/Cart.png" id="cart"/>
+			<ul>
+		        <li> <a href="index.html">Home</a>
+		        <li class="selected"> <a href="flavours.html">Flavours</a>
+		        <li class="buy"> <a href="checkout.html">Checkout</a>
+		        <li> <a href="#">Contact</a>
+			</ul>
+		<!-- CART -->
+			<p id="cartNum">0</p>
+		</div>
+
+		<!-- 3 COL 2 ROW IMAGES AND TEXT -->
+		<div class="row">
+			<div class="col">
+<!-- NUMBER 1 -->
+				<!-- col holds flavour name, description, image and nutrition link -->
+				<div class="flavourText">
+					<h3>Blueberry</h3>
+					<p>Daily fresh blueberries for the juicy flavour!</p>
+				</div>
+				<!-- to wrap image for text placement and define area for clicking of popup menu-->
+				<a href="#popup1"><div class="imageWrap">	<!-- #popup1 is the tag that shows up on html for adding popup -->		
+					<img class="image" src="Images/Blueberry.jpg">
+					<p class="hoverText">Click to Order</p>
+				</a></div>
+				<!-- creating the popup menu -->
+				<div id="popup1" class="overlay">	<!-- the black background that is overlay on top of the flavours page -->
+					<!-- to contain everything inside the popup menu -->
+					<div class="popup">
+						<img class="image" src="Images/Blueberry.jpg">
+						<a class="close" href="flavours.html">&times;</a>
+						<div class="content">
+							<h1 id="bun1" class="taste">Blueberry</h1><br>
+							<p id="price1">2.99</p>
+							<p>The blueberries used in our cinnamon rolls are delivered daily to our bakery so that our blueberry cinnamon rolls are delivered to you fresh, sweet and juicy!</p>
+							<!-- first selection of quantity of rolls to buy -->
+							<div class="selections">
+								<div class="amt">
+									<h3>Select your amount:</h3>
+									<select id="amount1">
+										<option id="1">1</option>
+										<option id="3">3</option>
+										<option id="6">6</option>
+										<option id="12">12</option>
+									</select>
+								</div>
+							<!-- second selection of choosing the glazing flavour -->
+								<div class="flavour">
+									<h3>Select your glazing:</h3>
+									<select id="glazing1">
+										<option id="None">None</option>
+										<option id="Double-Chocolate">Double Chocolate</option>
+										<option id="Sugar-Milk">Sugar-Milk</option>
+										<option id="Vanilla-Milk">Vanilla-Milk</option>
+									</select>
+									<br>
+								</div>
+							</div>
+							<!-- button to confirm selection that then brings back to flavours page without having to press the X on top R corner-->
+							<div>
+								<a href="#"><h4 class="add" onclick="addToCart1()">Add to Cart</h4></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- cost of rolls -->
+				<p>$2.99</p>
+				<!-- creating link for nutrition, idea is to have a popup modal as well, not implemented for this assignment -->
+				<a href="#"><div class="nutrition">
+					<p>Click for Nutritional Value</p>
+				</a></div>
+			</div>
+			<div class="col">
+<!-- NUMBER 2 -->
+				<div class="flavourText">
+					<h3>Caramel Pecan</h3>
+					<p>Perfect for someone craving sweets!</p>
+				</div>
+				<a href="#popup2"><div class="imageWrap">
+					<img class="image" src="Images/Caramel Pecan.jpg">
+					<p class="hoverText">Click to Order</p>
+				</a></div>
+				<div id="popup2" class="overlay">	<!-- the black background that is overlay on top of the flavours page -->
+					<!-- to contain everything inside the popup menu -->
+					<div class="popup">
+						<img class="image" src="Images/Caramel Pecan.jpg">
+						<a class="close" href="flavours.html">&times;</a>
+						<div class="content">
+							<h1 id="bun2" class="taste">Caramel Pecan</h1><br>
+							<p id="price2">2.99</p>
+							<p>Perfect for someone craving sweets!</p><br>
+							<!-- first selection of quantity of rolls to buy -->
+							<div class="selections">
+								<div class="amt">
+									<h3>Select your amount:</h3>
+									<select id="amount2">
+										<option id="1">1</option>
+										<option id="3">3</option>
+										<option id="6">6</option>
+										<option id="12">12</option>
+									</select>
+								</div>
+							<!-- second selection of choosing the glazing flavour -->
+								<div class="flavour2">
+									<h3>Select your glazing:</h3>
+									<select id="glazing2">
+										<option id="None">None</option>
+										<option id="Double-Chocolate">Double Chocolate</option>
+										<option id="Sugar-Milk">Sugar-Milk</option>
+										<option id="Vanilla-Milk">Vanilla-Milk</option>
+									</select>
+									<br>
+								</div>
+							</div>
+							<!-- button to confirm selection that then brings back to flavours page without having to press the X on top R corner-->
+							<div>
+								<a href="#"><h4 class="add" onclick="addToCart2()">Add to Cart</h4></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<p>$2.99</p>
+				<a href="#"><div class="nutrition">
+					<p>Click for Nutritional Value</p>
+				</a></div>
+			</div>
+			<div class="col">
+<!-- NUMBER 3 -->
+			<div class="flavourText">
+				<h3>Original</h3>
+				<p>Nothing goes wrong with the classic!</p>
+			</div>
+			<!-- to wrap image for text placement and define area for clicking of popup menu-->
+			<a href="#popup3"><div class="imageWrap">	<!-- #popup1 is the tag that shows up on html for adding popup -->		
+				<img class="image" src="Images/Original2.jpg">
+				<p class="hoverText">Click to Order</p>
+			</a></div>
+			<!-- creating the popup menu -->
+			<div id="popup3" class="overlay">	<!-- the black background that is overlay on top of the flavours page -->
+				<!-- to contain everything inside the popup menu -->
+				<div class="popup">
+					<img class="image" src="Images/Original2.jpg">
+					<a class="close" href="flavours.html">&times;</a>
+					<div class="content">
+						<h1 id="bun3" class="taste">Original</h1><br>
+						<p id="price3">2.99</p>
+						<p>Perfect for someone craving sweets!</p>
+						<!-- first selection of quantity of rolls to buy -->
+						<div class="selections">
+								<div class="amt">
+									<h3>Select your amount:</h3>
+									<select id="amount3">
+										<option id="1">1</option>
+										<option id="3">3</option>
+										<option id="6">6</option>
+										<option id="12">12</option>
+									</select>
+								</div>
+							<!-- second selection of choosing the glazing flavour -->
+								<div class="flavour">
+									<h3>Select your glazing:</h3>
+									<select id="glazing3">
+										<option id="None">None</option>
+										<option id="Double-Chocolate">Double Chocolate</option>
+										<option id="Sugar-Milk">Sugar-Milk</option>
+										<option id="Vanilla-Milk">Vanilla-Milk</option>
+									</select>
+									<br>
+								</div>
+							</div>
+							<!-- button to confirm selection that then brings back to flavours page without having to press the X on top R corner-->
+							<div>
+								<a href="#"><h4 class="add" onclick="addToCart3()">Add to Cart</h4></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- cost of rolls -->
+			<p>$2.99</p>
+			<!-- creating link for nutrition, idea is to have a popup modal as well, not implemented for this assignment -->
+			<a href="#"><div class="nutrition">
+				<p>Click for Nutritional Value</p>
+			</a></div>
+		</div>
+			<div class="col">
+<!-- NUMBER 4 -->
+			<div class="flavourText">
+					<h3>Original Gluten-Free</h3>
+					<p>The classic, but gluten-free!</p>
+				</div>
+				<!-- to wrap image for text placement and define area for clicking of popup menu-->
+				<a href="#popup4"><div class="imageWrap">	<!-- #popup1 is the tag that shows up on html for adding popup -->		
+					<img class="image" src="Images/Original3.jpg">
+					<p class="hoverText">Click to Order</p>
+				</a></div>
+				<!-- creating the popup menu -->
+				<div id="popup4" class="overlay">	<!-- the black background that is overlay on top of the flavours page -->
+					<!-- to contain everything inside the popup menu -->
+					<div class="popup">
+						<img class="image" src="Images/Blueberry.jpg">
+						<a class="close" href="flavours.html">&times;</a>
+						<div class="content">
+							<h1 id="bun4" class="taste">Original Gluten-Free</h1><br>
+							<p id="price4">2.99</p>
+							<p>The classic, but gluten-free!</p>
+							<!-- first selection of quantity of rolls to buy -->
+							<div class="selections">
+								<div class="amt">
+									<h3>Select your amount:</h3>
+									<select id="amount4">
+										<option id="1">1</option>
+										<option id="3">3</option>
+										<option id="6">6</option>
+										<option id="12">12</option>
+									</select>
+								</div>
+							<!-- second selection of choosing the glazing flavour -->
+								<div id="flavour4">
+									<h3>Select your glazing:</h3>
+									<select id="glazing4">
+										<option id="None">None</option>
+										<option id="Double-Chocolate">Double Chocolate</option>
+										<option id="Sugar-Milk">Sugar-Milk</option>
+										<option id="Vanilla-Milk">Vanilla-Milk</option>
+									</select>
+									<br>
+								</div>
+							</div>
+							<!-- button to confirm selection that then brings back to flavours page without having to press the X on top R corner-->
+							<div>
+								<a href="#"><h4 class="add" onclick="addToCart4()">Add to Cart</h4></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- cost of rolls -->
+				<p>$2.99</p>
+				<!-- creating link for nutrition, idea is to have a popup modal as well, not implemented for this assignment -->
+				<a href="#"><div class="nutrition">
+					<p>Click for Nutritional Value</p>
+				</a></div>
+			</div>
+			<div class="col">
+<!-- NUMBER 5 -->
+			<div class="flavourText">
+					<h3>Pumpkin Spice</h3>
+					<p>For a taste of fall in this cozy pumpkin treat!</p>
+				</div>
+				<!-- to wrap image for text placement and define area for clicking of popup menu-->
+				<a href="#popup5"><div class="imageWrap">	<!-- #popup1 is the tag that shows up on html for adding popup -->		
+					<img class="image" src="Images/Pumpkin Spice.jpg">
+					<p class="hoverText">Click to Order</p>
+				</a></div>
+				<!-- creating the popup menu -->
+				<div id="popup5" class="overlay">	<!-- the black background that is overlay on top of the flavours page -->
+					<!-- to contain everything inside the popup menu -->
+					<div class="popup">
+						<img class="image" src="Images/Pumpkin Spice.jpg">
+						<a class="close" href="flavours.html">&times;</a>
+						<div class="content">
+							<h1 id="bun5" class="taste">Pumpkin Spice</h1><br>
+							<p id="price5">2.99</p>
+							<p>For a taste of fall in this cozy pumpkin spice!</p>
+							<!-- first selection of quantity of rolls to buy -->
+							<div class="selections">
+								<div class="amt">
+									<h3>Select your amount:</h3>
+									<select id="amount5">
+										<option id="1">1</option>
+										<option id="3">3</option>
+										<option id="6">6</option>
+										<option id="12">12</option>
+									</select>
+								</div>
+							<!-- second selection of choosing the glazing flavour -->
+								<div class="flavour">
+									<h3>Select your glazing:</h3>
+									<select id="glazing5">
+										<option id="None">None</option>
+										<option id="Double-Chocolate">Double Chocolate</option>
+										<option id="Sugar-Milk">Sugar-Milk</option>
+										<option id="Vanilla-Milk">Vanilla-Milk</option>
+									</select>
+									<br>
+								</div>
+							</div>
+							<!-- button to confirm selection that then brings back to flavours page without having to press the X on top R corner-->
+							<div>
+								<a href="#"><h4 class="add" onclick="addToCart5()">Add to Cart</h4></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- cost of rolls -->
+				<p>$2.99</p>
+				<!-- creating link for nutrition, idea is to have a popup modal as well, not implemented for this assignment -->
+				<a href="#"><div class="nutrition">
+					<p>Click for Nutritional Value</p>
+				</a></div>
+			</div>
+			<div class="col">
+<!-- NUMBER 6 -->
+			<div class="flavourText">
+					<h3>Walnut</h3>
+					<p>A sprinkle of walnut for a healthier option!</p>
+				</div>
+				<!-- to wrap image for text placement and define area for clicking of popup menu-->
+				<a href="#popup6"><div class="imageWrap">	<!-- #popup1 is the tag that shows up on html for adding popup -->		
+					<img class="image" src="Images/Pumpkin Spice.jpg">
+					<p class="hoverText">Click to Order</p>
+				</a></div>
+				<!-- creating the popup menu -->
+				<div id="popup6" class="overlay">	<!-- the black background that is overlay on top of the flavours page -->
+					<!-- to contain everything inside the popup menu -->
+					<div class="popup">
+						<img class="image" src="Images/Pumpkin Spice.jpg">
+						<a class="close" href="flavours.html">&times;</a>
+						<div class="content">
+							<h1 id="bun6" class="taste">Walnut</h1><br>
+							<p id="price6">2.99</p>
+							<p>A sprinkle of walnut for a healthier option!</p>
+							<!-- first selection of quantity of rolls to buy -->
+							<div class="selections">
+								<div class="amt">
+									<h3>Select your amount:</h3>
+									<select id="amount6">
+										<option id="1">1</option>
+										<option id="3">3</option>
+										<option id="6">6</option>
+										<option id="12">12</option>
+									</select>
+								</div>
+							<!-- second selection of choosing the glazing flavour -->
+								<div class="flavour">
+									<h3>Select your glazing:</h3>
+									<select id="glazing6">
+										<option id="None">None</option>
+										<option id="Double-Chocolate">Double Chocolate</option>
+										<option id="Sugar-Milk">Sugar-Milk</option>
+										<option id="Vanilla-Milk">Vanilla-Milk</option>
+									</select>
+									<br>
+								</div>
+							</div>
+							<!-- button to confirm selection that then brings back to flavours page without having to press the X on top R corner-->
+							<div>
+								<a href="#"><h4 class="add" onclick="addToCart6()">Add to Cart</h4></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- cost of rolls -->
+				<p>$2.99</p>
+				<!-- creating link for nutrition, idea is to have a popup modal as well, not implemented for this assignment -->
+				<a href="#"><div class="nutrition">
+					<p>Click for Nutritional Value</p>
+				</a></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- javascript -->
+	<script src="main.js" type="text/javascript"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,605 @@
+body{
+	font-family: Helvetica, Arial, sans-serif
+}
+
+/* Logo */
+#logo {
+	float: left;
+	display: inline-block;
+	width: 200px;
+}
+/* Cart Logo */
+#cart {
+	float: right;
+	display: inline-block;
+	width: 50px;
+	padding: 30px;
+	margin-top: 10px;
+}
+/* Amount of Items in Cart */
+#cartNum {
+	position: absolute;
+	top: 38px;
+	right: 62.5px;
+	font-weight: bold;	
+}
+/* home page image */
+#frontImage {
+	margin-top: 80px;
+	width: 100%;
+}
+/* text on home page DELIVERY*/
+#text1 {
+	font-style: italic;
+	font-size: 15px;
+	position: absolute;
+	top: 153px;
+	left: 50%;
+	color: #E48E27;
+	transform: translate(-50%, -50%); /* to keep text centred */
+}
+/* background colour band for text */
+#textBg {
+	width: 99%;
+	height: 50px;
+	background: rgba(228, 142, 39, 0.1);
+	position: absolute;
+	top: 125px;
+	bottom: 175px;
+}
+/* text on image CUSTOMISABLE */
+#text2 {
+	color: #E48E27;
+	font-size: 30px;
+	position: absolute;
+	top: 250px;
+	left: 50%;
+	transform: translate(-50%, -50%); /* to keep text centred */
+	text-shadow: 1px 2px white;
+}
+/* text on image 6 FLAVOURS */
+#text3 {
+	color: #E48E27;
+	font-size: 60px;
+	position: absolute;
+	top: 325px;
+	left: 50%;
+	transform: translate(-50%, -50%); /* to keep text centred */
+	text-shadow: 2px 2px black;
+}
+/* text on image 3 GLAZINGS */
+#text4 {
+	color: #E48E27;
+	font-size: 60px;
+	position: absolute;
+	top: 400px;
+	left: 50%;
+	transform: translate(-50%, -50%); /* to keep text centred */
+	text-shadow: 2px 2px black;
+}
+
+.container {
+	max-width: 100%;
+}
+
+
+/* NAVIGATION BAR */
+.navBar ul {
+	list-style: none;
+	text-align: left;
+	float: left;
+	margin: 0;
+	font-size: 20px;
+	min-width: 400px;
+}
+/* to give placement to the divs of the nav bar */
+.navBar li {
+	float: left;
+	width: 12vw;		
+	min-width: 100px;	/* define width to make sure the nav don't shift with the change in font to bold */
+}
+/* styles that affect the four divs of the nav bar */
+.navBar li a {
+	display: inline;
+	display: block;
+	color: black;
+	font-size: 15px;
+	margin-top: 40px;
+	margin-left: 10px;
+	padding-left: 5px;
+	border-width: 1px;
+	border-left-style: solid;
+	border-left-color: #E48E27;
+}
+/* to add a hover effect of colour gradient and border edge change */
+.navBar li a:hover {
+	background-image: linear-gradient(to right, rgba(228, 142, 39, 0.5), rgba(228, 142, 39, 0));
+	border-width: 3px;
+	border-left-style: solid;
+	border-left-color: #E48E27;
+}
+/* to remove all decoration (eg. underline) for all links */
+.navBar li a:link {
+	text-decoration: none;
+}
+/* to remove all decoration for page visited by user */
+.navBar li a:visited {
+	text-decoration: none;
+}
+/* to indicate which page the user is currently on */
+.navBar .selected a {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #E48E27;
+}
+
+/* creating the arrows for carousel (currently static)*/
+i {
+	border: solid black;
+	border-width: 0 4px 4px 0;
+	display: inline-block;
+	padding: 8px;
+}
+.right {
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 225px;
+	left: 60px;
+}
+.left {
+	transform: rotate(135deg);
+	position: absolute;
+	top: 225px;
+	left: 35px;
+}
+/* creating the dots to indicate carousel number (currently static)*/
+#rectangle3 {
+	width: 15px;
+	height: 15px;
+	background: lightgrey;
+	position: absolute;
+	top: 228px;
+	right: 50px;
+}
+#rectangle2 {
+	width: 15px;
+	height: 15px;
+	background: lightgrey;
+	position: absolute;
+	top: 228px;
+	right: 80px;
+}
+#rectangle {
+	width: 15px;
+	height: 15px;
+	background: #bbb;
+	position: absolute;
+	top: 228px;
+	right: 110px;
+}
+
+
+
+/* THIS IS FOR FLAVOURS PAGE */
+/* The row and columns of the flavour grid */
+.row {
+	max-width: 75vw;			/* width based on the user's viewport width */
+	margin: 0 auto;				/* centre */
+	padding-top: 150px;			/* distance from top nav bar */
+}
+.col {
+	max-width: 300px;			/* each image&text width */
+	height: 450px;				/* height allowed for each grid */
+	text-align: center;
+	float: left;				/* to align images next to each other */
+	padding-bottom: 50px;		/* distances from each box of the grid */
+	padding-left: 3vw;
+	padding-right: 3vw;
+}
+/* Text above image */
+.flavourText {
+	height: 75px;
+}
+.flavourText h3 {
+	text-transform: uppercase;
+	color: #E48E27;
+}
+.flavourText p {
+	font-size: 14px;
+	font-style: italic;
+	color: #E48E27;
+}
+
+/*NUTRITION VALUE & link functions */
+.nutrition {
+	margin: 0;
+	font-size: 14px;
+	font-weight: none;
+	color: #E48E27;
+}
+.nutrition a:link, a:visited {
+	text-decoration: none;
+	color: blue;
+}
+.nutrition a:active {
+	text-decoration: none;
+	color: #E48E27;
+}
+
+
+/* creating the hover text by wrapping the image with a div for easy text alignment */
+.imageWrap {
+	position: relative;
+	height: 300px;
+	width: 300px;
+	background-color: black;
+	cursor: pointer;
+	z-index: 0;
+}
+.hoverText {
+	position: absolute;
+	font-size: 75px;
+	top: 0px;
+	color: white;
+	visibility: hidden;
+}
+.imageWrap:hover .hoverText {
+	visibility: visible;
+}
+.imageWrap:hover .image {
+	opacity: 0.65;
+}
+
+
+
+/* POPUP ORDER PAGE */
+/* the pop up menu that's hidden */
+.overlay {								
+	width: 100%;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	visibility: hidden;
+	opacity: 0;
+	z-index: 10;
+}
+/* showing the pop up menu */
+.overlay:target {						
+	visibility: visible;
+	opacity: 1;
+	z-index: 10;
+}
+/* style of the pop up menu */
+.popup {								
+	margin: 70px auto;
+	padding: 20px;
+ 	background: rgba(255, 255, 255, 0.9);
+	border-radius: 5px;
+	min-width: 675px;
+	max-width: 800px;
+	width: 75vw;
+	height: 500px;
+	position: relative;
+	z-index: 5;
+}
+/* popup cinnamon roll image */
+.popup .image {
+	float: left;
+	width: 200px;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: thin;
+	border-color: #E48E27;
+}
+/* popup text that goes next to image */
+.popup .content {
+	position: absolute;
+	top: 35px;
+	padding-left: 200px;
+	max-height: 75%
+	overflow: auto;
+}
+/* changing the font options and alignment of text next to image */
+.popup h1 {
+	float: left;
+	padding-left: 25px;
+}
+.popup p {
+	float: left;
+	text-align: left;
+	padding-left: 25px;
+	padding-right: 75px;
+}
+
+/* quantity selection */
+.selections {
+	float: left;
+	position: absolute;
+	left: 225px;
+	top: 185px;
+	width: 30vw;
+	border-top-style: solid;
+	border-top-width: 0.5px;
+	border-top-color: #000;
+}
+.selections h3 {
+	text-align: left;
+}
+/* Button Styling */
+.selections button {
+	background-color: #FFF;
+	border-radius: 5px;
+	box-shadow: 1px 1px;
+	font-weight: bold;
+}
+.selections button:hover {
+	background-color:rgba(228, 142, 39, 0.25);
+	cursor: pointer;
+}
+.amt button:focus {
+	background-color: rgba(228, 142, 39, 0.6);
+	outline: 0;
+}
+.flavour button:focus {
+	background-color: rgba(228, 142, 39, 0.6);
+	outline: 0;
+}
+/* Size of the buttons vary for the two selections */
+.amt button {
+	float: left;
+	height: 25px;
+	width: 4vw;
+	margin-right: 5px;
+}
+.flavour button {
+	display: block;
+	height: 30px;
+	width: 17vw;
+	margin-bottom: 5px;
+}
+
+/* Flavour list */
+.flavour {
+	float: left;
+	position: absolute;
+	top: 100px;
+}
+/* buttons */
+.popup .buttons {
+	float: right;
+	width: 200px;
+	position: absolute;
+	top: 425px;
+	right: 0;
+}
+.add {
+	float: left;
+	width: 100px;
+	position: absolute;
+	right: 50px;
+	top: 435px;
+	color: white;
+	background: red;
+	padding: 5px;
+	border-radius: 10px;
+	box-shadow: 2px 2px #000;
+
+}
+.popup .buttons .buy {
+	float: right;
+	width: 100px;
+	position: absolute;
+	right: 175px;
+	color: white;
+	background: orange;
+	padding: 5px;
+	border-radius: 10px;
+	box-shadow: 2px 2px #000;
+}
+
+/* the X closing mark top R */
+.popup .close {				
+	position: absolute;
+	top: 5px;
+	right: 15px;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+}
+/* add colour when hovered on top of the X */
+.popup .close:hover {		
+	color: #E48E27;
+}
+
+
+
+/* FOR THE CHECKOUT PAGE */
+.message {
+	float: left;
+	position: absolute;
+	top: 150px;
+	width: 95vw;
+	padding-left: 25px;
+	background-image: linear-gradient(to right, rgba(228, 142, 39, 0.25), rgba(228, 142, 39, 0));
+}
+/* the box that contains everything below the message div */
+.orderContent {
+	position: absolute;
+	top: 250px;
+	width: 95vw;
+}
+/* the box within orderContent that contains one flavour info */
+.groupContent {
+	float: left;
+	padding: 10px;
+	padding-right: 50px;
+}
+/* the text colour of flavour that's been added to cart */
+.groupContent .selected {
+	color: #E48E27;
+}
+/* the text colour of flavour that hasn't been added */
+.groupContent .unchosen {
+	color: rgba(0, 0, 0, 0.15);
+}
+/* the aesthetics of the image that's been added to cart */
+.groupContent .photo {
+	float: left;
+	width: 15vw;
+	min-width: 100px;
+	max-width: 200px;
+	border-style: solid;
+	border-width: medium;
+	border-color: #E48E27;
+}
+/* the aesthetics of the image that hasn't been added */
+.groupContent .none {
+	opacity: 0.15;
+}
+/* the box for the user input selections */
+.groupContent .choice {
+	float: left;
+	width: 18vw;
+	padding-left: 25px;
+	max-width: 300px;
+}
+/* user input text formatting */
+.groupContent .choice h3 {
+	text-transform: uppercase;
+	line-height: 0;
+}
+.groupContent .choice h4, h5 {
+	font-weight: normal;
+	line-height: 0;
+}
+.groupContent .choice h5 {
+	padding-left: 25px;
+}
+.groupContent .amount {
+	position: absolute;
+	left: 300px;
+	line-height: 0;
+}
+/* bottom message on total cost */
+.message2 {
+	float: left;
+	width: 95vw;
+	text-align: right;
+	margin-top: 25px;
+	padding-right: 25px;
+	background-image: linear-gradient(to right, rgba(228, 142, 39, 0), rgba(228, 142, 39, 0.25));
+}
+/* box that contains both buttons at the bottom */
+.buttonsFinal {
+	margin-top: 25px;
+	margin-bottom: 50px;
+}
+.buttonsFinal .confirm {
+	float: right;
+	text-align: center;
+	width: 200px;
+	background: red;
+	padding: 10px;
+	color: white;
+	text-transform: uppercase;
+	box-shadow: 2px 2px #000;
+}
+.buttonsFinal .return {
+	float: left;
+	text-align: center;
+	width: 300px;
+	background: orange;
+	padding: 10px;
+	color: white;
+	text-transform: uppercase;
+	box-shadow: 2px 2px #000;
+}
+
+
+
+#cartContent {
+	float: left;
+	position: absolute;
+	top: 150px;
+}
+
+.heading {
+	width: 14vw;
+	float: left;
+	border-bottom-style: solid;
+	border-bottom-width: 0.5px;
+	border-bottom-color: #000;
+	margin: 20px;
+	padding-bottom: 5px;
+}
+
+#cartHeadings p {
+	font-size: 12px;
+	font-style: italic;
+}
+#orders {
+	width: 200px;
+	height: 100px;
+	float: left;
+	position: absolute;
+	top: 50px;
+}
+.bigContainer {
+	float:left;
+	width: 100vw;
+}
+.flavourBun {
+	float: left;
+	width: 8vw;
+	font-size: 12px;
+	margin-top: 20px;
+	margin-right: 80px;
+	margin-left: 20px;
+	color: red;
+
+
+}
+.glazingBun {
+	float: left;
+	width: 8vw;
+	font-size: 12px;
+	margin-top: 20px;
+	margin-right: 80px;
+	margin-left: 20px;
+	color: red;
+}
+.quantityBun{
+	float: left;
+	width: 8vw;
+	font-size: 12px;
+	margin-top: 20px;
+	margin-right: 80px;
+	margin-left: 20px;
+	color: red;
+}
+
+.priceBun {
+	float: left;
+	width: 8vw;
+	font-size: 12px;
+	margin-top: 20px;
+	margin-right: 80px;
+	margin-left: 20px;
+	color: red;
+
+}
+
+
+.delete-item {
+	float: right;
+	margin-right: 20vw;
+}
+
+#totalCost {
+	position: absolute;
+	top: 500px;
+}
