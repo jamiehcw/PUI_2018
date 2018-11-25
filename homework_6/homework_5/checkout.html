@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <!-- styles -->
+     <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Checkout</title>
+</head>
+
+<body>
+	<div class="container">
+		<!-- NAVIGATION BAR -->
+		<div class="navBar">
+			<img src = "Images/Logo.png" id="logo"/>
+			<img src = "Images/Cart.png" id="cart"/>
+			<ul>
+		        <li> <a href="index.html">Home</a>
+		        <li> <a href="flavours.html">Flavours</a>
+		        <li class="selected"> <a href="checkout.html">Checkout</a>
+		        <li> <a href="#">Contact</a>
+			</ul>
+			<div id="cartNum">
+				1
+			</div>
+		</div>
+		<!-- to indicate how many items have been added to cart -->
+		<div class="message">
+			<h1>You have ordered [1] item(s):</h1>
+		</div>
+		<!-- the list of items -->
+		<div class="orderContent">
+			<!-- ONE -->
+			<div class="groupContent">
+				<img class="photo" src="Images/Blueberry.jpg">
+				<div class="choice selected">		<!-- selected means what's been added to cart that will have the full opacity -->
+					<h3>Blueberry</h3>
+					<h4>Glazing:</h4>
+					<h5>[1] Sugar-Milk</h5>
+				</div>
+				<div class="amount selected">
+					<h3>x 1</h3>
+				</div>
+			</div>
+			<!-- TWO -->
+			<div class="groupContent">
+				<img class="photo none" src="Images/Caramel Pecan.jpg"> 	<!-- none & unchosen mean what has not been selected that will have low opacity -->
+				<div class="choice unchosen">
+					<h3>Caramel Pecan</h3>
+				</div>
+				<div class="amount unchosen">
+					<h3>x 0</h3>
+				</div>
+			</div>
+			<!-- THREE -->
+			<div class="groupContent">
+				<img class="photo none" src="Images/Original2.jpg">
+				<div class="choice unchosen">
+					<h3>Original</h3>
+				</div>
+				<div class="amount unchosen">
+					<h3>x 0</h3>
+				</div>
+			</div>
+			<!-- FOUR -->
+			<div class="groupContent">
+				<img class="photo none" src="Images/Original3.jpg">	
+				<div class="choice unchosen"> 
+					<h3>Gluten-Free</h3>
+				</div>
+				<div class="amount unchosen">
+					<h3>x 0</h3>
+				</div>
+			</div>
+			<!-- FIVE -->
+			<div class="groupContent">
+				<img class="photo none" src="Images/Pumpkin Spice.jpg">
+				<div class="choice unchosen">
+					<h3>Pumpkin Spice</h3>
+				</div>
+				<div class="amount unchosen">
+					<h3>x 0</h3>
+				</div>
+			</div>
+			<!-- SIX -->
+			<div class="groupContent">
+				<img class="photo none" src="Images/Chocolate.jpg">
+				<div class="choice unchosen">
+					<h3>Walnut</h3>
+				</div>
+				<div class="amount unchosen">
+					<h3>x 0</h3>
+				</div>
+			</div>
+			<!-- to create the total cost message -->
+			<div class="message2">
+				<h2>Your current total is $2.99</h2>
+			</div>
+			<!-- to create buttons that can lead to next page -->
+			<div class="buttonsFinal">
+				<a href="#"><h2 class="confirm">Confirm</h2></a>
+				<a href="flavours.html"><h2 class="return">Keep Browsing</h2></a>
+		</div>
+		
+	</div>
+</body>
