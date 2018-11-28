@@ -9,7 +9,7 @@ $(document).ready(function(){
 
 
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("mySidenav").style.width = "225px";
 }
 
 function closeNav() {

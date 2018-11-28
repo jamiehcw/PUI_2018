@@ -1,3 +1,6 @@
+body {
+    height: 100%;
+}
 html {
     overflow-y: hidden;
 }
@@ -265,8 +268,8 @@ i {
     display: flex;
 }
 .card-content {
-    width: 468.75px;
-    height: 625px;
+    width: auto;
+    height: 60vh;
     background-color: black;
     z-index: -1;
     margin: 10px;
@@ -279,14 +282,15 @@ i {
     border-color: black;
 }
 .work-image {
-    height: 625px;
+    height: 60vh;
 }
 .hover-text {
     position: absolute;
-    width: 468.75px;
+    width: 400px;
     top: 33%;
+    margin: 0 25px;
     color: white;
-    text-align: center;
+    text-align: left;
     visibility: hidden;
 }
 .card-content:hover .hover-text{
@@ -304,13 +308,11 @@ i {
 }
 .project-description {
     font-size: 14px;
-    margin: 0 35px;
     line-height: 26px;
     font-style: italic;
 }
 .project-date, .project-group {
     font-size: 12px;
-    margin: 0 35px;
     line-height: 26px;
 }
 a, a:hover, a:link, a:visited, a:active {
