@@ -1,13 +1,13 @@
-body, html {
+body {
     height: 100%;
 }
-.banner {
-    position: fixed;
-    height: 115px;
-    width: 100vw;
-    background-color: white;
-    z-index: 3;
+html {
+    overflow-y: hidden;
 }
+::-webkit-scrollbar { 
+    display: none; 
+}
+
 .container {
     float: left;
     position: fixed;
@@ -194,48 +194,17 @@ br {
     height: 20px;
 }
 
-.hamburger {
-    position: fixed;
-    top: 57px;
-    right: 25px;
-    width: 25px;
-    height: 25px;
-    z-index: 3;
-}
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    margin-bottom: 5px;
-    background-color: grey;
-}
-
-.arrow {
-    position: absolute;
-    font-size: 25px;
-}
-i {
-    border: solid grey;
-    border-width: 0 4px 4px 0;
-    display: inline-block;
-    padding: 8px;
-}
-.left {
-    transform: rotate(1355deg);
-    -webkit-transform: rotate(135deg);
-    top: 35px;
-    left: 5px;
-}
+/* side navigation bar */
 .nav {
     height: 95%;
-    width: 250px;
+    width: 225px;
     position: fixed;
     z-index: 1;
     top: 100px;
-    left: 0;
+    right: 0;
     background-color: rgba(255, 255, 255, 0.925);
     padding-top: 60px;
 }
-
 .sidenav {
     height: 100vh;
     width: 0;
@@ -269,92 +238,66 @@ i {
     top: 0px;
 }
 
-
-/* project pages */
-.project-nav {
-    position: fixed;
-    z-index: 5;
-    background-color: rgba(255, 255, 255, 0.85);
+/* cards for each project */
+.cards, .c, .card-content, .work-image {
+    height: 33vw;
+    min-height: 262.91px;
 }
-
-
-
-
-/* Project HTML - parallax part*/
-
-.parallax-img {
-    height: 100vh;
-    /* parallax scrolling effect styling */
-    background-position: center right;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    -webkit-background-size: 75% auto;
-    -moz-background-size: 75% auto;
-    -o-background-size: 75% auto;
-    background-size: 75% auto;
-    max-width: 100%;
-}
-#img1-1 {
-    background-image: url(Images/dded/Picture1.jpg);   
-}
-#textimg-1 {
-    background-image: url(Images/dded/p2-text1.png)
-}
-#img1-2 {
-    background-image: url(Images/dded/Capture.jpg);   
-}
-#img1-3 {
-    background-image: url(Images/dded/portfo-image6-1.png);   
-}
-#img1-4 {
-    background-image: url(Images/dded/Picture2.png);   
-}
-/* title block */
-.parallax-text {
+#cards {
     position: absolute;
-    top: 50%;
-    padding-top: 50px;
-    padding-left: 0;
-    width: 90%;
-    height: 250px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0));
-    z-index: 1;
+    top: 160px;
+    left: 25px;
+    border-radius: 10px;
+    z-index: -1;
+    margin: 0;
+    display: flex;
 }
-.parallax-title {
-    margin-left: 5vw;
-    width: 65vw;
-    font-size: 26px;
+.card-content {
+    background-color: black;
+    z-index: -1;
+    margin: 0;
+    margin-right: 10px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    border-style: solid;
+    border-width: thick;
+    border-color: black;
+}
+.hover-text {
+    position: absolute;
+    width: 20vw;
+    margin: 8vw 2vw 4vw 2vw;
     color: white;
     text-align: left;
-    text-transform: uppercase;
+    visibility: hidden;
+    overflow: hidden;
+}
+.card-content:hover .hover-text{
+    transition: 0.5s;
+    visibility: visible;
+}
+.card-content:hover .work-image {
+    opacity: 0.25;
+    transition: 0.5s;
+    transform: scale(1.15, 1.15);
+}
+.project-title {
+    font-size: 20px;
     font-weight: bold;
 }
-.parallax-info {
-    font-size: 14px;
+.project-description {
+    font-size: 12px;
+    line-height: 26px;
     font-style: italic;
 }
-.parallax-description, .parallax-info {
-    text-align: left;
-    text-transform: none;
-    margin-left: 5vw;
-    color: white;
-    max-width: 50vw;
-}
-/* 2nd text */
-.project-description {
-    position: absolute;
-    top: 2150px;
-    padding-top: 50px;
-    padding-left: 0;
-    width: 22vw;
-    height: 500px;
-    z-index: 1;
-}
-.parallax-description {
-    color: black;
-    padding-right: 25px;
-}
-.parallax-description p {
+.project-date, .project-group {
     font-size: 12px;
+    line-height: 26px;
+}
+a, a:hover, a:link, a:visited, a:active {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
 }
