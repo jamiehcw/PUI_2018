@@ -1,0 +1,303 @@
+body {
+    height: 100%;
+}
+html {
+    overflow-y: hidden;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.container {
+    float: left;
+    position: fixed;
+    max-width: 230px;
+    height: 100vh;
+    z-index: 3;
+}
+#logo {
+    position: fixed;
+    width: 200px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    z-index: 3;
+}
+.panel {
+    width: 200px;
+}
+.panel-group {
+    position: absolute;
+    top: 60px;
+}
+.panel-heading {
+    margin-left: 15px;
+}
+.panel, .panel-default, .panel-heading, .list-group, li {
+    border: 0 !important;
+    box-shadow: none!important;
+    background: transparent !important;
+    z-index: -1 !important;
+}
+
+/* Main titles div */
+.panel-title {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+/* main titles */
+.main {
+    font-size: 12px;
+}
+/* Subheadings */
+.sub {
+    margin-left: 20px;
+    text-transform: none;
+    font-size: 12px;
+}
+span {
+    float: right;
+}
+/* Subheading div */
+.list-group {
+    cursor: pointer;
+    margin-left: 45px;
+}
+
+/* Subheadings */
+li {
+    font-size: 12px;
+    
+}
+/* About Me toggle button */
+.toggle {
+    position: fixed;
+    top: 55px;
+    right: 75px;
+    width: 25px;
+    height: 25px;
+    min-width: 25px;
+    min-height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 5;
+}
+.toggle:before {
+    content: '+';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 25px;
+    text-align: center;
+    line-height: 25px;
+    width: 100%;
+    height: 95%;
+    color: #fff;
+    border-radius: 50%; 
+    background: rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+    transition: 0.5s;
+    z-index: 5;
+}
+.toggle.active:before {
+    transform: rotate(405deg);
+    background: #fff;
+    color: #000;
+}
+/* the black background that comes in */
+.overlay {
+    position: fixed;
+    width: 3vw;
+    height: 3vw;
+    transition: transform 1s;
+    z-index: -1;
+}
+/* animation that happens after activation */
+.overlay.active {
+    position: fixed;
+    max-width: 100%;
+    max-height: 100%;
+    transform: scale(200, 200);
+    background: #000;
+    z-index: 4;
+}
+/* content on black-background */
+.overlay-content {
+    position: fixed;
+    width: 100%;
+    height: 95%;
+    top: 10vw;
+    z-index: 3;
+    visibility: hidden;
+}
+/* content that appears after activation */
+.overlay-content.active {
+    position: fixed;
+    height: 100%;
+    visibility: visible;
+    z-index: 4;
+}
+#logo2 {
+    position: absolute;
+    top: 125px;
+    display: inline-block;
+    width: 200px;
+    margin-left: 15px;
+    margin-bottom: 60px;
+}
+.links {
+    position: absolute;
+    z-index: 5;
+}
+#about {
+    width: 65vw;
+    float: left;
+    display: inline-block;
+    color: #FFF;
+    position: absolute;
+    left: 32vw;
+    top: 150px;
+    max-width: 55vw;
+    min-width: 250px;
+    margin-right: 50px;
+    font-size: 16px;
+    line-height: 30px;
+}
+br {
+    content: "";
+    margin: 2em;
+    display: block;
+    font-size: 100%;
+}
+.overlay-content ul {
+    position: absolute;
+    padding-left: 30px;
+    top: 225px;
+}
+.overlay-content li {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    width: 100px !important;
+    background-color: rgba(0, 0, 0, 0)  !important;
+}
+.overlay-content li a {
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+}
+.overlay-content:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+}
+
+/* side navigation bar */
+.nav {
+    height: 95%;
+    width: 225px;
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.925);
+    padding-top: 60px;
+}
+.sidenav {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.menu-title {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    top: 30px;
+}
+.menu-title p {
+    text-transform: uppercase;
+    font-size: 14px;
+    position: absolute;
+    left: 30px;
+    top: 0px;
+}
+
+/* cards for each project */
+.cards, .c, .card-content, .work-image {
+    height: 33vw;
+    min-height: 262.91px;
+}
+#cards {
+    position: absolute;
+    top: 160px;
+    left: 25px;
+    border-radius: 10px;
+    z-index: -1;
+    margin: 0;
+    display: flex;
+}
+.card-content {
+    background-color: black;
+    z-index: -1;
+    margin: 0;
+    margin-right: 10px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    border-style: solid;
+    border-width: thick;
+    border-color: black;
+}
+.hover-text {
+    position: absolute;
+    width: 20vw;
+    margin: 8vw 2vw 4vw 2vw;
+    color: white;
+    text-align: left;
+    visibility: hidden;
+    overflow: hidden;
+}
+.card-content:hover .hover-text{
+    transition: 0.5s;
+    visibility: visible;
+}
+.card-content:hover .work-image {
+    opacity: 0.25;
+    transition: 0.5s;
+    transform: scale(1.15, 1.15);
+}
+.project-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+.project-description {
+    font-size: 12px;
+    line-height: 26px;
+    font-style: italic;
+}
+.project-date, .project-group {
+    font-size: 12px;
+    line-height: 26px;
+}
+a, a:hover, a:link, a:visited, a:active {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
