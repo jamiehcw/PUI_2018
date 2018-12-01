@@ -8,12 +8,9 @@
         e.preventDefault();
     }
     if (window.addEventListener) {
-        // IE9, Chrome, Safari, Opera
+        // Chrome
         window.addEventListener("mousewheel", scrollHorizontally, false);
         // Firefox
         window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
-    } else {
-        // IE 6/7/8
-        window.attachEvent("onmousewheel", scrollHorizontally);
-    }
+    } 
 })();
